@@ -6,10 +6,10 @@ ini_set('max_execution_time', 9999);
 error_reporting(E_ALL);
 
 $filename = 'dump.sql';
-$mysql_host = '92.204.210.0';
-$mysql_username = 'george_ny';
-$mysql_password = 'Metricerter1_@#';
-$mysql_database = 'ouraimhms_db';
+$mysql_host = 'localhost';
+$mysql_username = 'root';
+$mysql_password = '';
+$mysql_database = 'epiz_32822078_hospitalhms';
 
 // Connect to MySQL server
 $link = mysqli_connect($mysql_host, $mysql_username, $mysql_password, $mysql_database) or die('Error connecting to MySQL server: ' . mysqli_connect_error());
@@ -50,6 +50,6 @@ for ($i = 0; $i < $totalQueries; $i += $chunkSize) {
 mysqli_close($link);
 
 // Now that all queries are executed, perform the redirect
-header("Location: http://hms.ouraim.org/");
+// header("Location: http://hms.ouraim.org/");
 exit;
 ?>
